@@ -4,7 +4,7 @@ from url_obfuscated import helpers
 def deobfuscate(view_func):
     def wrapper(request, *args, **kwargs):
         new_kwargs = dict()
-        for key, value in kwargs.iteritems():
+        for key, value in kwargs.items():
             if value:
                 new_kwargs[key] = helpers.deobfuscate(str(value))
             else:

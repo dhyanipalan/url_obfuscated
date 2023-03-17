@@ -1,4 +1,4 @@
-{% load obfuscate %}
+{% load obfuscate_tags %}
 
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,8 @@
 
         <h1>Obfuscate with Optional Params</h1>
         <p><a href="{% url 'optional_param' %}">Link without param: {% url 'optional_param' %}</a></p>
-        <p><a href="{% url 'optional_param' 'This is the param'|obfuscate %}">Link with param: {% url 'optional_param' 'This is the param'|obfuscate %}</a></p>
+        <p><a href="{% url 'optional_param' 'This is a String Param'|obfuscate %}">Link with String param: {% url 'optional_param' 'This is the param'|obfuscate %}</a></p>
+        <p><a href="{% url 'optional_param' 2345|obfuscate %}">Link with Integer param: {% url 'optional_param' 2345|obfuscate %}</a></p>
     </body>
 
 </html>
