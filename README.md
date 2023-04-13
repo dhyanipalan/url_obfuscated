@@ -46,7 +46,7 @@ When declaring URLs with parameters inside templates, use the obfuscate template
 
 You can also obfuscate any value from inside a view, use the obfuscate function, as follows:
 
-    from url_obfuscate.helpers import obfuscate
+    from url_obfuscated.helpers import obfuscate
     ...
 
     def home(request):
